@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(42, 42, 42);
+        }
+
+        div {
+            width: 200px;
+            padding: 20px;
+        }
+
+        input {
+            margin-bottom: 5px !important;
+        }
+
+        button {
+            border-radius: 5px !important;
+            min-width: 90px;
+            margin-bottom: 2px !important;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+
+    <div>
+        <!-- start input1 Number of lines for the bragrave -->
+        <input type="text" placeholder="Number of lines" name="" id="inputa">
+        <!-- End input1 Number of lines for the bragrave -->
+        <!-- start input1 The number of letters of the paragraph -->
+        <input type="text" placeholder="number of letters" name="" id="inputb">
+        <!-- End input1 The number of letters of the paragraph -->
+        <div id="apindButtom">
+            <button onclick="generate()" class="btn btn-outline-success">generate</button>
+        </div>
+    </div>
+
+
+    <header>
+
+    </header>
+
+    <script>
+        // add variable containing the text lorem
+        var lorems = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae facere saepe inventore, necessitatibus perspiciatis explicabo fuga voluptatum distinctio voluptate eum dignissimos eveniet nobis placeat doloremque odit error obcaecati, possimus, ratione assumenda. Rem exercitationem, velit ullam sunt omnis perferendis repellat quae sequi possimus itaque nostrum labore nisi eos distinctio totam, provident perspiciatis molestiae accusamus dicta fugit aliquam porro! Repellat iste doloremque numquam similique voluptates assumenda illum pariatur modi perferendis ut! Doloribus officiis eveniet molestiae labore provident temporibus tempora, accusantium nemo est! Ducimus fugiat voluptatem reiciendis aliquid inventore eius provident voluptatum id numquam modi, ex, voluptates blanditiis dolorem vitae natus nesciunt facilis tempore labore ad, doloribus accusantium porro cupiditate? Sunt veritatis dolores praesentium id culpa repudiandae itaque iure pariatur voluptas eos! Delectus asperiores alias animi dicta sed. Omnis, aspernatur quo voluptatibus officiis aliquam laborum dicta modi eveniet saepe iure quae alias, culpa facilis! Temporibus quos nisi beatae necessitatibus adipisci ducimus porro consequatur quaerat mollitia laboriosam exercitationem maiores excepturi optio, nihil id. Laborum commodi velit, distinctio molestias eligendi labore perspiciatis, nulla eos ex adipisci ducimus! Voluptatum culpa ex magni nisi corporis, pariatur aperiam rem obcaecati ratione! Quia, minus. Vel, fugit? A dolorum recusandae laudantium reprehenderit nostrum. Qui velit esse cumque dolorem adipisci earum doloribus repellendus fugit perferendis excepturi odio unde, alias tempore facere iusto explicabo iure enim, rem repellat voluptatibus laborum! Deleniti officia odio saepe doloremque! Eos optio quia consequatur placeat eum ipsa id error adipisci quaerat repudiandae facilis, perferendis voluptate, minus doloremque iusto quis fugiat deleniti ratione obcaecati debitis quos omnis! Vitae fugiat sunt nisi. Quo iste cumque mollitia voluptate temporibus neque! Error reprehenderit, delectus dolore debitis voluptate dolorum minus. Distinctio excepturi ducimus maxime aut nulla suscipit id error provident pariatur beatae! Delectus possimus odio consectetur quae non molestias quis eveniet qui nesciunt! Pariatur est nulla quasi atque qui quas, corporis quos laborum quod consequuntur velit autem sunt tenetur sit placeat consequatur doloremque culpa dolores eius ab nobis accusamus quibusdam labore facere. Eum voluptate nobis, incidunt minus quia, aperiam magnam sunt exercitationem laboriosam libero expedita ab delectus maxime ipsam fuga nulla quod eveniet ad consequuntur alias. Animi inventore magni facere sed natus id officiis non ratione totam recusandae reiciendis ab veniam, veritatis dolore incidunt nobis unde corrupti dolor labore autem magnam consequuntur numquam! Nemo, veniam maxime. Accusantium accusamus quos quae modi odio quo porro et libero! Totam sint, quisquam possimus cupiditate debitis deserunt doloribus incidunt? Iste neque a tenetur quaerat beatae. Provident, voluptatum tenetur expedita vel dolore hic repellat dolorem autem aperiam nam dolores consectetur optio nesciunt enim cumque nulla perspiciatis dicta sed! Est libero iure quae minus, culpa, recusandae quas minima, doloremque earum dolorum atque autem reprehenderit perspiciatis hic expedita officiis molestias repellat eius rem maiores laboriosam iusto! Recusandae, harum. Possimus, rerum reiciendis cum natus unde mollitia corrupti molestias dolore saepe quasi, nobis voluptates non optio libero exercitationem voluptatibus veniam! Sapiente possimus porro expedita laboriosam voluptatem magni adipisci, tempora quasi explicabo, praesentium iusto? Consequuntur, repellendus quae. Recusandae esse repellendus cupiditate, molestiae ducimus suscipit nobis ex incidunt provident tenetur ipsam soluta sed!"
+        // Adding variables containing the input
+        var inp1 = document.getElementById("inputa")
+        var inp2 = document.getElementById("inputb")
+        // This is the special part The backgroundColor of body
+        document.body.style.backgroundColor = `rgb(42, 42, 42)`
+
+        // start function generate
+        function generate() {
+            // Add variable containing assorted color
+            // The random number has been multiplied by 150 so that the color tone is not light
+            var bColor1 = Math.round(Math.random() * 150)
+            var bColor2 = Math.round(Math.random() * 150)
+            var bColor3 = Math.round(Math.random() * 150)
+            // Conditions to be entered by the user in the input box
+            // start input1 
+            document.querySelector("header").innerHTML = ""
+            if (inp1.value >= 1 && inp2.value >= 1) {
+                for (let i = 0; i < inp1.value; i++) {
+                    // start createElement paragraph
+                    if (inp1.value <= 100) {
+                        var prag = document.createElement("p")
+                        document.querySelector("header").appendChild(prag)
+                        prag.innerText = lorems
+                        prag.style.color = `#fff`
+                    }
+                    else if (inp1.value > 100) {
+                        inp1.value = 100
+                        var prag = document.createElement("p")
+                        document.querySelector("header").appendChild(prag)
+                        prag.innerText = lorems
+                        prag.style.color = `#fff`
+                    }
+                    // Input 2 is made inside input1 so that input 2 is triggered after it fills in input 1
+                    // start input2
+                    if (inp2.value <= 3000) {
+                        var rand = Math.round(Math.random() * 1000)
+                        var myLorem = lorems.substr(rand, inp2.value)
+                        prag.innerText = myLorem
+                    }
+                    else if (inp2.value > 3000) {
+                        inp2.value = 3000
+                        var rand = Math.round(Math.random() * 1000)
+                        var myLorem = lorems.substr(rand, inp2.value)
+                        prag.innerText = myLorem
+                    }
+                }
+            }
+            // start button 
+            var button1 = document.querySelector("button")
+            button1.style = `
+                border: solid 2px rgb(${bColor3}, ${bColor2}, ${bColor1})!important;
+                border-radius: 5px !important;
+                width: 50px;
+            `
+            // This is the special part The backgroundColor of body
+            document.body.style.backgroundColor = `rgb(${bColor1}, ${bColor2}, ${bColor3})`
+            // start function delet   
+        }
+    </script>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
